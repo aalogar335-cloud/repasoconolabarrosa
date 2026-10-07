@@ -155,20 +155,24 @@
   ],
   "desarrollo": [
     {
-      "pregunta": "Explica por qué es necesario el proceso de la digestión.",
-      "respuesta_modelo": "Porque las células no pueden utilizar directamente los alimentos. Con la digestión los alimentos se transforman en nutrientes, sustancias más sencillas que las células sí pueden utilizar para obtener energía y materiales."
+      "pregunta": "¿Cómo se llama el proceso mediante el cual los alimentos se transforman en nutrientes?",
+      "respuesta_modelo": "El proceso de la digestión."
     },
     {
-      "pregunta": "Explica qué tipo de nutrientes contiene un plato de lentejas elaborado con lentejas, zanahorias y arroz.",
-      "respuesta_modelo": "Las lentejas son legumbres, que aportan hidratos de carbono, proteínas, vitaminas y sales minerales. Las zanahorias proporcionan vitaminas y sales minerales, y el arroz, sobre todo, hidratos de carbono."
+      "pregunta": "Sara celebra su cumpleaños con una comida familiar. Ha propuesto este menú: pescado al horno acompañado de arroz, verduras y anacardos; de postre, ensalada de frutas, y para beber, simplemente agua. ¿Qué tipos de nutrientes contiene el menú de Sara? ¿Cuáles de esos alimentos clasificarías como constructores?",
+      "respuesta_modelo": "Hidratos de carbono: arroz y fruta. Lípidos: anacardos. Proteínas: pescado y anacardos. Vitaminas y sales minerales: verduras, frutas y pescado. Los alimentos constructores son, sobre todo, los que contienen proteínas, como el pescado y los anacardos."
     },
     {
-      "pregunta": "Explica qué significa que una alimentación es saludable y sostenible.",
-      "respuesta_modelo": "Significa que los alimentos que consumimos son sanos y que la forma en la que se producen y distribuyen es respetuosa con el medioambiente."
+      "pregunta": "Existen distintas guías para elaborar comidas saludables, una de ellas es el plato de Harvard. ¿Qué nos muestra este plato?",
+      "respuesta_modelo": "El plato de Harvard muestra las proporciones y los tipos de alimentos que conviene tomar a lo largo de un día y también se puede aplicar a las dos comidas principales."
     },
     {
-      "pregunta": "Indica en qué parte del tubo digestivo se produce cada uno de estos procesos: formación del quimo, formación del quilo y absorción de los nutrientes.",
-      "respuesta_modelo": "Formación del quimo: estómago. Formación del quilo: intestino delgado. Absorción de nutrientes: intestino delgado."
+      "pregunta": "Completa el texto escribiendo las palabras que faltan: «Para … los alimentos, se utilizan diversos métodos. Algunos, como el …, evitan el crecimiento de …; otros, como el calor, los mata. También podemos prolongar su duración añadiendo sustancias como la … o el vinagre, o secándolos al sol.»",
+      "respuesta_modelo": "Para conservar los alimentos, se utilizan diversos métodos. Algunos, como el frío, evitan el crecimiento de microorganismos; otros, como el calor, los mata. También podemos prolongar su duración añadiendo sustancias como la sal o el vinagre, o secándolos al sol."
+    },
+    {
+      "pregunta": "El padre de Sara ha tenido un problema con el páncreas. Explica qué hace esta glándula y dónde interviene en el proceso de la digestión.",
+      "respuesta_modelo": "El páncreas es una glándula que secreta el jugo pancreático al intestino delgado y que, junto con otros jugos que se encuentran ahí, convierten el quimo en quilo durante el proceso de la digestión."
     }
   ]
 }

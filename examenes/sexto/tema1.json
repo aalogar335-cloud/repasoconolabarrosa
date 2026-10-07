@@ -205,19 +205,23 @@
   ],
   "desarrollo": [
     {
-      "pregunta": "Sara ha propuesto este menú para su cumpleaños: pescado al horno acompañado de arroz, verduras y anacardos; de postre, ensalada de frutas, y para beber, agua. ¿Qué tipos de nutrientes contiene el menú? ¿Cuáles de esos alimentos clasificarías como constructores?",
-      "respuesta_modelo": "El menú contiene hidratos de carbono (arroz y frutas), proteínas (pescado y anacardos), lípidos (anacardos), vitaminas y sales minerales (verduras y frutas) y agua. Los alimentos constructores son los que contienen sobre todo proteínas: el pescado y los anacardos."
+      "pregunta": "Completa la frase escribiendo las palabras que faltan: «La función de … es el conjunto de procesos mediante los que obtenemos la … y los … necesarios para realizar nuestras actividades diarias y crecer.»",
+      "respuesta_modelo": "La función de nutrición es el conjunto de procesos mediante los que obtenemos la energía y los materiales necesarios para realizar nuestras actividades diarias y crecer."
+    },
+    {
+      "pregunta": "Una de estas afirmaciones es falsa. Escríbela correctamente. (1) Los hidratos de carbono son la fuente principal de energía. (2) Los lípidos o grasas también proporcionan energía, pero más deprisa. (3) Las proteínas proporcionan los materiales para crecer y reparar los tejidos. Las vitaminas y las sales minerales regulan muchos procesos del organismo.",
+      "respuesta_modelo": "La afirmación falsa es la segunda. Lo correcto es: los lípidos o grasas proporcionan más energía que los hidratos de carbono, pero de forma más lenta."
     },
     {
       "pregunta": "¿En qué se basa la dieta mediterránea? ¿Qué tipo de aceite es característico de esta dieta?",
-      "respuesta_modelo": "Se basa en la abundancia de alimentos de origen vegetal, como legumbres, cereales integrales, frutos secos, verduras y frutas. Es característico el uso del aceite de oliva."
+      "respuesta_modelo": "Se basa en la abundancia de alimentos de origen vegetal, como legumbres, cereales integrales, frutos secos, verduras y frutas. Es característico el uso de aceite de oliva."
     },
     {
       "pregunta": "Enumera las normas básicas de higiene que debemos adoptar en nuestros hogares para evitar la contaminación de los alimentos.",
-      "respuesta_modelo": "Lavarse las manos de forma correcta antes de preparar o comer un alimento. Limpiar las superficies de trabajo y los utensilios que se van a usar. Lavar bien las frutas y las verduras antes de consumirlas o cocinarlas."
+      "respuesta_modelo": "Lavarse las manos correctamente antes de preparar o comer un alimento. Limpiar las superficies de trabajo y los utensilios que se van a usar. Lavar bien las frutas y las verduras antes de consumirlas o cocinarlas."
     },
     {
-      "pregunta": "¿En qué órganos del tubo digestivo se realizan las fases del proceso digestivo: digestión, absorción y eliminación de desechos?",
+      "pregunta": "Indica en qué órganos se realizan las fases del proceso digestivo (boca, estómago, intestino delgado e intestino grueso): digestión, absorción y eliminación de desechos.",
       "respuesta_modelo": "Digestión: boca, estómago e intestino delgado. Absorción: intestino delgado. Eliminación de desechos: intestino grueso."
     }
   ]

@@ -155,20 +155,24 @@
   ],
   "desarrollo": [
     {
-      "pregunta": "Describe el recorrido de la fibra durante el proceso de la digestión a lo largo del tubo digestivo.",
-      "respuesta_modelo": "Los alimentos con fibra entran en la boca, donde los dientes los trituran y la lengua los mezcla con la saliva formando el bolo alimenticio. Este desciende por el esófago hasta el estómago, donde se mezcla con los jugos gástricos formando el quimo, que pasa al intestino delgado. Allí se mezcla con los jugos intestinales, la bilis y los jugos pancreáticos y se transforma en quilo. A diferencia de los nutrientes, la fibra no se absorbe y pasa al intestino grueso, formando parte de las heces."
+      "pregunta": "Además de la digestión, ¿qué otros procesos intervienen en la función de nutrición? Enuméralos.",
+      "respuesta_modelo": "La respiración, la circulación y la excreción."
     },
     {
-      "pregunta": "Explica para qué sirven las etiquetas de los alimentos y cita cuatro datos que deben aparecer en ellas.",
-      "respuesta_modelo": "Las etiquetas nos ayudan a seleccionar los productos más adecuados y a comprar de forma segura. Pueden aparecer: nombre del alimento, ingredientes, nutrientes, modo de conservación, país y lugar de origen, datos del fabricante, peso, lote y fecha de caducidad o de consumo preferente."
+      "pregunta": "Además de elaborar comidas saludables, ¿qué otros consejos le darías a Sara para mantenerse sana?",
+      "respuesta_modelo": "Cocinar con aceites vegetales, evitar las bebidas azucaradas y hacer ejercicio."
     },
     {
-      "pregunta": "Explica de qué formas podemos conservar los alimentos.",
-      "respuesta_modelo": "Por frío (se refrigeran o congelan y el frío evita que crezcan microorganismos). Por calor (las temperaturas altas matan los microorganismos, como en las conservas). Añadiendo sustancias como sal, vinagre o azúcar. Eliminando el agua, por ejemplo secándolos al sol."
+      "pregunta": "Sara ha preparado la comida de su cumpleaños. ¿Qué reglas básicas de higiene han debido adoptar al preparar la comida?",
+      "respuesta_modelo": "Lavarse las manos correctamente antes de preparar o comer un alimento. Limpiar las superficies de trabajo y los utensilios que se van a usar. Lavar bien las frutas y las verduras antes de consumirlas o cocinarlas."
     },
     {
-      "pregunta": "¿Debes reducir el consumo de golosinas? Razona tu respuesta.",
-      "respuesta_modelo": "Sí. Las golosinas contienen azúcares que, tomados en exceso, son perjudiciales; llevan sustancias añadidas para dar color, aroma y sabor; apenas aportan proteínas, vitaminas o minerales y favorecen las caries. Por eso deben tomarse solo de forma excepcional."
+      "pregunta": "Sara no ha incluido en la ensalada de frutas una lata de melocotón, después de ver la fecha de caducidad. ¿Qué información aporta esa fecha?",
+      "respuesta_modelo": "La fecha de caducidad explica hasta cuándo se puede consumir este alimento. Después de esta fecha no se debe tomar, ya que existe un riesgo para la salud."
+    },
+    {
+      "pregunta": "¿En qué parte del proceso digestivo se forma el quimo?",
+      "respuesta_modelo": "El quimo se forma en el estómago al mezclarse el bolo alimenticio con los jugos gástricos."
     }
   ]
 }

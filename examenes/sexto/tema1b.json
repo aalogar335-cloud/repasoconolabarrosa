@@ -155,20 +155,24 @@
   ],
   "desarrollo": [
     {
-      "pregunta": "Define con tus palabras qué son los nutrientes.",
-      "respuesta_modelo": "Los nutrientes son sustancias sencillas que se obtienen de los alimentos mediante la digestión y que las células utilizan para obtener energía y materiales."
+      "pregunta": "Enumera los procesos que intervienen en la nutrición y los aparatos donde tiene lugar cada uno de ellos.",
+      "respuesta_modelo": "La digestión ocurre en el aparato digestivo. La respiración, en el aparato respiratorio. La circulación, en el aparato circulatorio. La excreción, sobre todo en el aparato urinario."
     },
     {
-      "pregunta": "Haz una lista con los aparatos implicados en la función de nutrición y relaciona cada uno con el proceso que corresponde.",
-      "respuesta_modelo": "Aparato digestivo: digestión. Aparato respiratorio: respiración. Aparato circulatorio: circulación. Aparato urinario: excreción."
+      "pregunta": "Explica qué son los alimentos energéticos, los constructores y los reguladores: qué función tiene cada tipo y qué nutrientes contienen.",
+      "respuesta_modelo": "Alimentos energéticos: proporcionan energía; contienen hidratos de carbono y lípidos. Alimentos constructores: proporcionan materiales para crecer y reparar los tejidos; contienen proteínas. Alimentos reguladores: ayudan a regular los procesos del organismo; contienen vitaminas y sales minerales."
     },
     {
-      "pregunta": "Explica qué tipo de alimentos debe contener en mayor proporción una dieta saludable.",
-      "respuesta_modelo": "Se recomienda que la mayor proporción sean verduras y frutas. Según el plato de Harvard, deben suponer el 50 % de nuestros alimentos."
+      "pregunta": "Sara celebra su cumpleaños con una comida familiar. Ha propuesto este menú: pescado al horno acompañado de arroz, verduras y anacardos; de postre, ensalada de frutas, y para beber, simplemente agua. Explica si la base de este menú podría clasificarse como de dieta mediterránea.",
+      "respuesta_modelo": "Este menú se puede considerar de dieta mediterránea, ya que esta se basa en la abundancia de alimentos de origen vegetal, como legumbres, cereales integrales, frutos secos, verduras y frutas."
     },
     {
-      "pregunta": "Distingue entre fecha de caducidad y fecha de consumo preferente.",
-      "respuesta_modelo": "La fecha de caducidad indica el día tras el cual el consumo de un alimento puede ser perjudicial para la salud. La fecha de consumo preferente señala cuándo el alimento puede perder alguna de sus propiedades, como sabor, aroma o textura, pero no supone un riesgo para la salud."
+      "pregunta": "El hermano de Sara no llegará a la comida hasta la noche. ¿Cómo conservarías su comida? ¿Qué otros métodos de conservación de alimentos conoces?",
+      "respuesta_modelo": "La conservaría en frío, dentro del frigorífico. Otros métodos son la conservación por calor, añadiendo sustancias como la sal y el vinagre, o eliminando el agua de los alimentos."
+    },
+    {
+      "pregunta": "Clasifica estos órganos escribiendo T si pertenecen al tubo digestivo y G si son una glándula anexa: boca, hígado, intestino grueso, estómago, esófago, intestino delgado, páncreas y faringe.",
+      "respuesta_modelo": "Pertenecen al tubo digestivo (T): boca, intestino grueso, estómago, esófago, intestino delgado y faringe. Son glándulas anejas (G): el hígado y el páncreas."
     }
   ]
 }
