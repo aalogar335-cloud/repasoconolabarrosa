@@ -133,16 +133,6 @@
       "explicacion": "El aparato circulatorio transporta y distribuye a todas las células los nutrientes y el oxígeno a través de la sangre."
     },
     {
-      "pregunta": "¿Cuál es la principal fuente de energía de nuestro cuerpo?",
-      "opciones": [
-        "Los hidratos de carbono.",
-        "Las vitaminas.",
-        "El agua."
-      ],
-      "correcta": 0,
-      "explicacion": "Los hidratos de carbono son la fuente principal de energía."
-    },
-    {
       "pregunta": "La fibra de los alimentos es una parte que nuestro cuerpo…",
       "opciones": [
         "utiliza para obtener energía.",
@@ -161,46 +151,6 @@
       ],
       "correcta": 0,
       "explicacion": "Después de la fecha de consumo preferente el producto puede perder propiedades como el sabor, el aroma o la textura, pero no es un riesgo para la salud."
-    },
-    {
-      "pregunta": "En la boca, los alimentos triturados se mezclan con la saliva y forman el…",
-      "opciones": [
-        "quimo.",
-        "bolo alimenticio.",
-        "quilo."
-      ],
-      "correcta": 1,
-      "explicacion": "Los dientes trituran los alimentos y la lengua los mezcla con la saliva, formando el bolo alimenticio."
-    },
-    {
-      "pregunta": "¿Qué glándula anexa produce la bilis?",
-      "opciones": [
-        "El páncreas.",
-        "El estómago.",
-        "El hígado."
-      ],
-      "correcta": 2,
-      "explicacion": "El hígado es la glándula más grande del cuerpo y en ella se forma la bilis."
-    },
-    {
-      "pregunta": "En el estómago, el bolo alimenticio se mezcla con los jugos gástricos y forma el…",
-      "opciones": [
-        "quimo.",
-        "quilo.",
-        "bolo fecal."
-      ],
-      "correcta": 0,
-      "explicacion": "En el estómago se forma el quimo, que tiene aspecto de papilla y pasa al intestino delgado."
-    },
-    {
-      "pregunta": "¿Dónde se absorbe el agua de los restos de alimentos y se forman las heces?",
-      "opciones": [
-        "En el estómago.",
-        "En el intestino grueso.",
-        "En el esófago."
-      ],
-      "correcta": 1,
-      "explicacion": "En el intestino grueso se absorbe el agua de los restos y se forman las heces, que se expulsan por el ano."
     }
   ],
   "desarrollo": [
