@@ -1,0 +1,174 @@
+{
+  "id": "tema1b",
+  "titulo": "Tema 1: La función de nutrición (Modelo 2)",
+  "test": [
+    {
+      "pregunta": "La función de nutrición es el conjunto de procesos mediante los que obtenemos…",
+      "opciones": [
+        "energía y materiales.",
+        "vitaminas y sales minerales.",
+        "oxígeno y agua."
+      ],
+      "correcta": 0,
+      "explicacion": "Con la nutrición obtenemos la energía y los materiales necesarios para realizar nuestras actividades y crecer."
+    },
+    {
+      "pregunta": "¿Qué proceso elimina al exterior las sustancias de desecho?",
+      "opciones": [
+        "La circulación.",
+        "La excreción.",
+        "La respiración."
+      ],
+      "correcta": 1,
+      "explicacion": "Las sustancias de desecho que se originan en el organismo se eliminan al exterior mediante la excreción."
+    },
+    {
+      "pregunta": "La excreción ocurre, sobre todo, en el aparato…",
+      "opciones": [
+        "circulatorio.",
+        "digestivo.",
+        "urinario."
+      ],
+      "correcta": 2,
+      "explicacion": "La excreción ocurre sobre todo en el aparato urinario."
+    },
+    {
+      "pregunta": "¿Qué gas se libera en la respiración de las células y se elimina a través del aparato respiratorio?",
+      "opciones": [
+        "El oxígeno.",
+        "El dióxido de carbono.",
+        "El hidrógeno."
+      ],
+      "correcta": 1,
+      "explicacion": "En la respiración celular se libera dióxido de carbono, que pasa a la sangre y se elimina por el aparato respiratorio."
+    },
+    {
+      "pregunta": "Los lípidos también se llaman…",
+      "opciones": [
+        "proteínas.",
+        "grasas.",
+        "azúcares."
+      ],
+      "correcta": 1,
+      "explicacion": "Los lípidos, también llamados grasas, están en el aceite, la mantequilla, el queso y los frutos secos."
+    },
+    {
+      "pregunta": "¿Qué nutrientes regulan muchos procesos del organismo para que funcione de forma correcta?",
+      "opciones": [
+        "Las vitaminas y las sales minerales.",
+        "Los lípidos.",
+        "Los hidratos de carbono."
+      ],
+      "correcta": 0,
+      "explicacion": "Las vitaminas y las sales minerales regulan muchos procesos del organismo."
+    },
+    {
+      "pregunta": "Los alimentos constructores contienen, sobre todo…",
+      "opciones": [
+        "hidratos de carbono.",
+        "vitaminas.",
+        "proteínas."
+      ],
+      "correcta": 2,
+      "explicacion": "Los alimentos constructores proporcionan materiales para crecer y reparar los tejidos; contienen sobre todo proteínas."
+    },
+    {
+      "pregunta": "¿Cuál de estos alimentos es de origen vegetal y rico en proteínas?",
+      "opciones": [
+        "Las lentejas.",
+        "El queso.",
+        "El huevo."
+      ],
+      "correcta": 0,
+      "explicacion": "Las legumbres, como las lentejas, aportan proteínas de origen vegetal."
+    },
+    {
+      "pregunta": "¿Qué parte del plato de Harvard deben ocupar los cereales?",
+      "opciones": [
+        "La mitad.",
+        "Una cuarta parte.",
+        "Una décima parte."
+      ],
+      "correcta": 1,
+      "explicacion": "Una cuarta parte del plato debe incluir cereales, mejor integrales."
+    },
+    {
+      "pregunta": "Según el plato de Harvard, ¿cuál debe ser la bebida principal?",
+      "opciones": [
+        "Los refrescos.",
+        "El zumo de frutas.",
+        "El agua."
+      ],
+      "correcta": 2,
+      "explicacion": "El agua debe ser la bebida principal; hay que evitar las bebidas azucaradas."
+    },
+    {
+      "pregunta": "La dieta mediterránea utiliza alimentos…",
+      "opciones": [
+        "muy procesados.",
+        "poco procesados, frescos y de temporada.",
+        "congelados y envasados."
+      ],
+      "correcta": 1,
+      "explicacion": "La dieta mediterránea utiliza alimentos poco procesados, frescos y de temporada."
+    },
+    {
+      "pregunta": "Una dieta es…",
+      "opciones": [
+        "el conjunto de alimentos que tomamos habitualmente.",
+        "un tipo de nutriente.",
+        "un método para hacer ejercicio."
+      ],
+      "correcta": 0,
+      "explicacion": "La dieta es el conjunto de alimentos que tomamos habitualmente."
+    },
+    {
+      "pregunta": "¿Cómo ayuda el frío a conservar los alimentos?",
+      "opciones": [
+        "Evita que crezcan los microorganismos.",
+        "Mata los microorganismos.",
+        "Añade sustancias que alargan su duración."
+      ],
+      "correcta": 0,
+      "explicacion": "El frío evita que crezcan los microorganismos; es el calor el que los mata."
+    },
+    {
+      "pregunta": "¿Qué dato de la etiqueta permite localizar un producto cuando hay que detener su venta?",
+      "opciones": [
+        "El peso.",
+        "El nombre del alimento.",
+        "El lote."
+      ],
+      "correcta": 2,
+      "explicacion": "El lote son letras o números que sirven para localizar el producto si hay algún problema."
+    },
+    {
+      "pregunta": "¿Qué órgano del tubo digestivo conecta la faringe con el estómago?",
+      "opciones": [
+        "El esófago.",
+        "El intestino grueso.",
+        "La boca."
+      ],
+      "correcta": 0,
+      "explicacion": "El esófago es un tubo largo que conecta la faringe con el estómago."
+    }
+  ],
+  "desarrollo": [
+    {
+      "pregunta": "Define con tus palabras qué son los nutrientes.",
+      "respuesta_modelo": "Los nutrientes son sustancias sencillas que se obtienen de los alimentos mediante la digestión y que las células utilizan para obtener energía y materiales."
+    },
+    {
+      "pregunta": "Haz una lista con los aparatos implicados en la función de nutrición y relaciona cada uno con el proceso que corresponde.",
+      "respuesta_modelo": "Aparato digestivo: digestión. Aparato respiratorio: respiración. Aparato circulatorio: circulación. Aparato urinario: excreción."
+    },
+    {
+      "pregunta": "Explica qué tipo de alimentos debe contener en mayor proporción una dieta saludable.",
+      "respuesta_modelo": "Se recomienda que la mayor proporción sean verduras y frutas. Según el plato de Harvard, deben suponer el 50 % de nuestros alimentos."
+    },
+    {
+      "pregunta": "Distingue entre fecha de caducidad y fecha de consumo preferente.",
+      "respuesta_modelo": "La fecha de caducidad indica el día tras el cual el consumo de un alimento puede ser perjudicial para la salud. La fecha de consumo preferente señala cuándo el alimento puede perder alguna de sus propiedades, como sabor, aroma o textura, pero no supone un riesgo para la salud."
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "id": "tema1c",
+  "titulo": "Tema 1: La función de nutrición (Modelo 3)",
+  "test": [
+    {
+      "pregunta": "Las células utilizan los nutrientes junto con… para obtener energía.",
+      "opciones": [
+        "el oxígeno.",
+        "la bilis.",
+        "la fibra."
+      ],
+      "correcta": 0,
+      "explicacion": "En la respiración celular los nutrientes se combinan con el oxígeno para producir la energía que las células necesitan."
+    },
+    {
+      "pregunta": "La función de la circulación es…",
+      "opciones": [
+        "triturar los alimentos.",
+        "eliminar las heces.",
+        "transportar y distribuir los nutrientes y el oxígeno a todas las células."
+      ],
+      "correcta": 2,
+      "explicacion": "Los nutrientes y el oxígeno pasan a la sangre, que los transporta y distribuye a todas las células."
+    },
+    {
+      "pregunta": "¿En qué se diferencia el aparato circulatorio del resto de aparatos de la nutrición?",
+      "opciones": [
+        "Se localiza por todo el cuerpo.",
+        "Está solo en el abdomen.",
+        "Está solo en la cabeza."
+      ],
+      "correcta": 0,
+      "explicacion": "Se localiza por todo el cuerpo porque la sangre tiene que llegar a todas las células."
+    },
+    {
+      "pregunta": "Los hidratos de carbono con sabor dulce se llaman…",
+      "opciones": [
+        "azúcares.",
+        "lípidos.",
+        "proteínas."
+      ],
+      "correcta": 0,
+      "explicacion": "Los azúcares son un tipo de hidrato de carbono que tiene sabor dulce."
+    },
+    {
+      "pregunta": "¿Cuál de estos alimentos es rico en lípidos?",
+      "opciones": [
+        "La manzana.",
+        "El pan.",
+        "El aceite."
+      ],
+      "correcta": 2,
+      "explicacion": "Los lípidos están sobre todo en el aceite, los derivados lácteos y los frutos secos."
+    },
+    {
+      "pregunta": "Los lípidos proporcionan energía…",
+      "opciones": [
+        "de forma más lenta que los hidratos de carbono.",
+        "de forma más rápida que los hidratos de carbono.",
+        "de forma igual que las vitaminas."
+      ],
+      "correcta": 0,
+      "explicacion": "Los lípidos dan más energía que los hidratos de carbono, pero de forma más lenta."
+    },
+    {
+      "pregunta": "Las legumbres, como las lentejas, aportan…",
+      "opciones": [
+        "hidratos de carbono, proteínas, vitaminas y sales minerales.",
+        "solo agua.",
+        "solo fibra."
+      ],
+      "correcta": 0,
+      "explicacion": "Las lentejas son legumbres y aportan hidratos de carbono, proteínas, vitaminas y sales minerales."
+    },
+    {
+      "pregunta": "Las proteínas de origen animal deben proceder principalmente…",
+      "opciones": [
+        "del pescado.",
+        "de los embutidos.",
+        "de la carne de cerdo."
+      ],
+      "correcta": 0,
+      "explicacion": "Según el plato de Harvard, las proteínas animales deben venir sobre todo del pescado."
+    },
+    {
+      "pregunta": "¿Qué alimentos conviene limitar según el plato de Harvard?",
+      "opciones": [
+        "Las legumbres.",
+        "Las carnes rojas y los embutidos.",
+        "El pescado."
+      ],
+      "correcta": 1,
+      "explicacion": "Se recomienda limitar las carnes rojas (vaca, cerdo, cordero) y los embutidos."
+    },
+    {
+      "pregunta": "Según el plato de Harvard, las frutas es mejor tomarlas…",
+      "opciones": [
+        "enteras.",
+        "en zumo.",
+        "en mermelada."
+      ],
+      "correcta": 0,
+      "explicacion": "Las frutas es mejor tomarlas enteras y no en zumo."
+    },
+    {
+      "pregunta": "La dieta mediterránea no es solo una forma de alimentarse, sino también…",
+      "opciones": [
+        "una forma de cocinar y de compartir los alimentos.",
+        "una forma de hacer deporte.",
+        "una forma de ahorrar dinero."
+      ],
+      "correcta": 0,
+      "explicacion": "Es también una forma de cocinar y de compartir los alimentos."
+    },
+    {
+      "pregunta": "En la dieta mediterránea el consumo de pescado, aves, lácteos y huevos es…",
+      "opciones": [
+        "moderado.",
+        "muy abundante.",
+        "escaso."
+      ],
+      "correcta": 0,
+      "explicacion": "En la dieta mediterránea el consumo de pescado, aves, lácteos y huevos es moderado, y el de carnes rojas, escaso."
+    },
+    {
+      "pregunta": "Producir alimentos de origen animal conlleva…",
+      "opciones": [
+        "más emisiones de gases de efecto invernadero que los de origen vegetal.",
+        "menos emisiones de gases de efecto invernadero que los de origen vegetal.",
+        "las mismas emisiones que los de origen vegetal."
+      ],
+      "correcta": 0,
+      "explicacion": "La obtención de alimentos de origen animal conlleva más emisiones de gases de efecto invernadero."
+    },
+    {
+      "pregunta": "¿Cuál es una norma básica de higiene al manipular alimentos?",
+      "opciones": [
+        "Lavarse las manos antes de preparar o comer un alimento.",
+        "Lavar las frutas después de comerlas.",
+        "Guardar los utensilios sin limpiarlos."
+      ],
+      "correcta": 0,
+      "explicacion": "Hay que lavarse las manos antes de preparar o comer, limpiar superficies y utensilios y lavar frutas y verduras antes de consumirlas."
+    },
+    {
+      "pregunta": "Las temperaturas altas conservan los alimentos porque…",
+      "opciones": [
+        "matan los microorganismos.",
+        "hacen que crezcan más despacio.",
+        "añaden sal al alimento."
+      ],
+      "correcta": 0,
+      "explicacion": "Las temperaturas altas matan los microorganismos; por ejemplo, se usan al hacer conservas."
+    }
+  ],
+  "desarrollo": [
+    {
+      "pregunta": "Explica por qué es necesario el proceso de la digestión.",
+      "respuesta_modelo": "Porque las células no pueden utilizar directamente los alimentos. Con la digestión los alimentos se transforman en nutrientes, sustancias más sencillas que las células sí pueden utilizar para obtener energía y materiales."
+    },
+    {
+      "pregunta": "Explica qué tipo de nutrientes contiene un plato de lentejas elaborado con lentejas, zanahorias y arroz.",
+      "respuesta_modelo": "Las lentejas son legumbres, que aportan hidratos de carbono, proteínas, vitaminas y sales minerales. Las zanahorias proporcionan vitaminas y sales minerales, y el arroz, sobre todo, hidratos de carbono."
+    },
+    {
+      "pregunta": "Explica qué significa que una alimentación es saludable y sostenible.",
+      "respuesta_modelo": "Significa que los alimentos que consumimos son sanos y que la forma en la que se producen y distribuyen es respetuosa con el medioambiente."
+    },
+    {
+      "pregunta": "Indica en qué parte del tubo digestivo se produce cada uno de estos procesos: formación del quimo, formación del quilo y absorción de los nutrientes.",
+      "respuesta_modelo": "Formación del quimo: estómago. Formación del quilo: intestino delgado. Absorción de nutrientes: intestino delgado."
+    }
+  ]
+}
