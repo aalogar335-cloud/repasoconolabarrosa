@@ -45,11 +45,13 @@ input[type=text],input[type=password],textarea{display:block;width:100%;font:inh
 .stats .card{margin:0;text-align:center}
 .stats b{display:block;font-size:1.8rem}
 .item{width:100%;text-align:left;display:block;margin-bottom:10px;padding:12px 14px}
+details.card summary{cursor:pointer;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-weight:700}
+details.card[open] summary{margin-bottom:12px}
 </style>
 </head>
 <body>
-<header><b>🌍 Conocimiento del Medio</b><nav id="nav" hidden>
-<button data-go="lista">Exámenes</button><button data-go="res">Mis resultados</button><button data-go="out">Salir</button></nav></header>
+<header><b>🌍 Conocimiento del Medio</b> <span class="mut" style="font-size:.8rem">v3 · panel profesor</span><nav id="nav" hidden>
+<button data-go="profe" hidden>Mis alumnos</button><button data-go="lista">Exámenes</button><button data-go="res">Mis resultados</button><button data-go="out">Salir</button></nav></header>
 <main id="app"></main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
@@ -81,10 +83,16 @@ let user = null, nivel = 'quinto';
 try { nivel = localStorage.getItem('nivel') || 'quinto'; } catch (e) {}
 
 async function getJSON(url) { const r = await fetch(url); if (!r.ok) throw new Error(url); return r.json(); }
-function nav(on) { $('#nav').hidden = !on; }
+const esProfe = () => !!user && /^\s*profe-/i.test(user.nombre);
+function inicio() { esProfe() ? vistaProfe() : vistaLista(); }
+function nav(on) {
+  $('#nav').hidden = !on;
+  if (on && user) document.querySelectorAll('#nav [data-go]').forEach(b => { b.hidden = b.dataset.go === 'out' ? false : (b.dataset.go === 'profe') !== esProfe(); });
+}
 
 $('#nav').onclick = e => {
   const g = e.target.dataset.go; if (!g) return;
+  if (g === 'profe') vistaProfe();
   if (g === 'lista') vistaLista();
   if (g === 'res') vistaResultados();
   if (g === 'out') { user = null; cred = null; try { sessionStorage.removeItem('cred'); } catch (e) {} vistaLogin(); }
@@ -102,7 +110,7 @@ function vistaLogin() {
     const ok = await entrarCon({ p_nombre: $('#u').value.trim(), p_clave: $('#p').value });
     b.disabled = false;
     if (!ok) { $('#err').textContent = 'Usuario o contraseña incorrectos. Revísalos e inténtalo otra vez.'; return; }
-    vistaLista();
+    inicio();
   };
   $('#go').onclick = entrar;
   $('#p').onkeydown = e => { if (e.key === 'Enter') entrar(); };
@@ -188,7 +196,7 @@ function vistaRevision(a, aviso) {
   const n = nota(a), d = a.detail || { test: [], open: [] };
   app.onclick = null;
   app.innerHTML = `${aviso ? `<p class="err" role="alert">${esc(aviso)}</p>` : ''}
-  <div class="card row"><div><h2>${esc(a.exam_title)}</h2><span class="mut">${fecha(a.created_at)} · Test: ${a.test_correct}/${a.test_total} · Desarrollo: ${fmt(Number(a.open_score))}/${a.open_total}</span></div>
+  <div class="card row"><div><h2>${esc(a.exam_title)}</h2><span class="mut">${a.alumno ? esc(a.alumno) + ' · ' : ''}${fecha(a.created_at)} · Test: ${a.test_correct}/${a.test_total} · Desarrollo: ${fmt(Number(a.open_score))}/${a.open_total}</span></div>
   <div class="nota ${n >= 5 ? 'ok' : 'bad'}">${fmt(n)}<span class="mut" style="font-size:1rem"> / 10</span></div></div>
   ${d.test.length ? '<h3 class="mut">Test</h3>' : ''}
   ${d.test.map((q, i) => `<div class="card"><h3>${q.ok ? '✅' : '❌'} ${i + 1}. ${esc(q.pregunta)}</h3>
@@ -198,8 +206,32 @@ function vistaRevision(a, aviso) {
   ${d.open.length ? '<h3 class="mut">Preguntas a desarrollar</h3>' : ''}
   ${d.open.map((q, i) => `<div class="card"><h3>${q.puntos === 1 ? '✅' : q.puntos === 0.5 ? '🟡' : '❌'} ${esc(q.pregunta)}</h3>
     <p><b>Tu respuesta:</b> ${esc(q.respuesta) || '<span class="mut">(vacía)</span>'}</p><div class="modelo"><b>Respuesta modelo</b><p>${esc(q.modelo)}</p></div></div>`).join('')}
-  <button class="btn" onclick="vistaLista()">Volver a los exámenes</button>`;
+  <button class="btn" onclick="inicio()">${esProfe() ? 'Volver al panel' : 'Volver a los exámenes'}</button>`;
   window.scrollTo(0, 0);
+}
+
+/* ---------- Panel del profesor ---------- */
+async function vistaProfe() {
+  nav(true); app.onclick = null;
+  app.innerHTML = '<h2>Mis alumnos</h2><p class="mut">Cargando…</p>';
+  const { data, error } = await sb.rpc('examenes_profe_resumen', cred);
+  if (error || !data) { app.innerHTML = '<h2>Mis alumnos</h2><p class="err">No se han podido cargar los datos.</p>'; return; }
+  const por = {}; data.alumnos.forEach(a => { por[a.id] = { nombre: a.nombre, l: [] }; });
+  data.intentos.forEach(i => { if (por[i.alumno_id]) por[i.alumno_id].l.push(i); });
+  const todos = [], filas = Object.values(por);
+  const media = l => l.length ? l.reduce((s, a) => s + nota(a), 0) / l.length : null;
+  const mGlobal = media(data.intentos);
+  app.innerHTML = `<h2>Mis alumnos</h2>
+  <div class="stats"><div class="card"><b>${filas.length}</b><span class="mut">alumnos</span></div>
+  <div class="card"><b>${filas.filter(f => f.l.length).length}</b><span class="mut">han hecho algún examen</span></div>
+  <div class="card"><b>${data.intentos.length}</b><span class="mut">exámenes hechos</span></div>
+  <div class="card"><b>${mGlobal === null ? '–' : fmt(mGlobal)}</b><span class="mut">nota media</span></div></div>
+  ${filas.length ? '' : `<p>No hay alumnos cuyo nombre empiece por <b>${esc(data.prefijo)}</b>.</p>`}
+  ${filas.map(f => { const m = media(f.l); return `<details class="card"><summary><span>${esc(f.nombre)}</span>
+    <span class="mut">${f.l.length ? `${f.l.length} examen(es) · media <b>${fmt(m)}</b>` : 'Sin exámenes'}</span></summary>
+    ${f.l.map(a => { todos.push(a); return `<button class="card item" data-t="${todos.length - 1}"><div class="row"><span><b>${esc(a.exam_title)}</b><br><span class="mut">${nivelTxt(a.exam_id.split('/')[0])} · ${fecha(a.created_at)}</span></span><b class="${nota(a) >= 5 ? 'ok' : 'bad'}">${fmt(nota(a))}</b></div></button>`; }).join('')}
+    </details>`; }).join('')}`;
+  app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => vistaRevision(todos[b.dataset.t]));
 }
 
 /* ---------- Mis resultados ---------- */
@@ -223,7 +255,7 @@ async function vistaResultados() {
 
 /* ---------- Inicio ---------- */
 if (SUPABASE_URL.startsWith('PEGA')) { app.innerHTML = '<p class="err">Falta configurar SUPABASE_URL y SUPABASE_KEY al principio del archivo.</p>'; }
-else (async () => { try { const c = JSON.parse(sessionStorage.getItem('cred')); if (c && await entrarCon(c)) return vistaLista(); } catch (e) {} vistaLogin(); })();
+else (async () => { try { const c = JSON.parse(sessionStorage.getItem('cred')); if (c && await entrarCon(c)) return inicio(); } catch (e) {} vistaLogin(); })();
 </script>
 </body>
 </html>
