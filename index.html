@@ -50,7 +50,7 @@ details.card[open] summary{margin-bottom:12px}
 </style>
 </head>
 <body>
-<header><b>🌍 Conocimiento del Medio</b> <span class="mut" style="font-size:.8rem">v3 · panel profesor</span><nav id="nav" hidden>
+<header><b>🌍 Conocimiento del Medio</b> <span class="mut" style="font-size:.8rem">v4 · profesor con exámenes</span><nav id="nav" hidden>
 <button data-go="profe" hidden>Mis alumnos</button><button data-go="lista">Exámenes</button><button data-go="res">Mis resultados</button><button data-go="out">Salir</button></nav></header>
 <main id="app"></main>
 
@@ -87,7 +87,7 @@ const esProfe = () => !!user && /^\s*profe-/i.test(user.nombre);
 function inicio() { esProfe() ? vistaProfe() : vistaLista(); }
 function nav(on) {
   $('#nav').hidden = !on;
-  if (on && user) document.querySelectorAll('#nav [data-go]').forEach(b => { b.hidden = b.dataset.go === 'out' ? false : (b.dataset.go === 'profe') !== esProfe(); });
+  if (on && user) document.querySelectorAll('#nav [data-go]').forEach(b => { const g = b.dataset.go; b.hidden = g === 'out' || g === 'lista' ? false : (g === 'profe') !== esProfe(); });
 }
 
 $('#nav').onclick = e => {
@@ -124,10 +124,17 @@ async function vistaLista() {
   app.querySelectorAll('.seg button').forEach(b => b.onclick = () => { nivel = b.dataset.n; try { localStorage.setItem('nivel', nivel); } catch (e) {} vistaLista(); });
   try {
     const idx = await getJSON(`${RUTA}/${nivel}/index.json`);
-    const data = await intentos();
+    const data = esProfe() ? [] : await intentos();
     const ult = {}; (data || []).forEach(a => { ult[a.exam_id] ??= a; });
     if (!idx.length) throw 0;
     $('#lista').className = '';
+    if (esProfe()) {
+      $('#lista').innerHTML = idx.map(x => `<div class="card"><div class="row"><b>${esc(x.titulo)}</b><span><button data-ver="${esc(x.id)}">Ver con respuestas</button> <button data-probar="${esc(x.id)}">Probar</button></span></div></div>`).join('')
+        + '<p class="mut">Al probar un examen no se guarda ningún resultado.</p>';
+      $('#lista').querySelectorAll('[data-ver]').forEach(b => b.onclick = () => vistaSolucion(b.dataset.ver));
+      $('#lista').querySelectorAll('[data-probar]').forEach(b => b.onclick = () => vistaExamen(b.dataset.probar));
+      return;
+    }
     $('#lista').innerHTML = idx.map(x => { const a = ult[`${nivel}/${x.id}`];
       return `<button class="card item" data-id="${esc(x.id)}"><div class="row"><b>${esc(x.titulo)}</b>
       <span class="mut">${a ? `Última nota: <b>${fmt(nota(a))}</b>` : 'Sin hacer'}</span></div></button>`; }).join('');
@@ -185,6 +192,7 @@ async function vistaExamen(id) {
     ($('#nota') || $('#fin')).disabled = true;
     const fila = { username: user.nombre, exam_id: `${nivel}/${id}`, exam_title: ex.titulo, test_correct: tc, test_total: test.length,
       open_score: dO.reduce((s, x) => s + x.puntos, 0), open_total: dev.length, detail: { test: dT, open: dO } };
+    if (esProfe()) { fila.created_at = new Date().toISOString(); vistaRevision(fila, 'Modo profesor: este intento no se ha guardado.'); return; }
     const { error } = await sb.rpc('examenes_guardar', { ...cred, p_exam_id: fila.exam_id, p_exam_title: fila.exam_title, p_test_correct: fila.test_correct, p_test_total: fila.test_total, p_open_score: fila.open_score, p_open_total: fila.open_total, p_detail: fila.detail });
     fila.created_at = new Date().toISOString();
     vistaRevision(fila, error ? 'No se ha podido guardar el resultado. Avisa a tu profesora o profesor.' : '');
@@ -195,7 +203,7 @@ async function vistaExamen(id) {
 function vistaRevision(a, aviso) {
   const n = nota(a), d = a.detail || { test: [], open: [] };
   app.onclick = null;
-  app.innerHTML = `${aviso ? `<p class="err" role="alert">${esc(aviso)}</p>` : ''}
+  app.innerHTML = `${aviso ? `<p class="${aviso.startsWith('Modo') ? 'mut' : 'err'}" role="alert">${esc(aviso)}</p>` : ''}
   <div class="card row"><div><h2>${esc(a.exam_title)}</h2><span class="mut">${a.alumno ? esc(a.alumno) + ' · ' : ''}${fecha(a.created_at)} · Test: ${a.test_correct}/${a.test_total} · Desarrollo: ${fmt(Number(a.open_score))}/${a.open_total}</span></div>
   <div class="nota ${n >= 5 ? 'ok' : 'bad'}">${fmt(n)}<span class="mut" style="font-size:1rem"> / 10</span></div></div>
   ${d.test.length ? '<h3 class="mut">Test</h3>' : ''}
@@ -206,7 +214,21 @@ function vistaRevision(a, aviso) {
   ${d.open.length ? '<h3 class="mut">Preguntas a desarrollar</h3>' : ''}
   ${d.open.map((q, i) => `<div class="card"><h3>${q.puntos === 1 ? '✅' : q.puntos === 0.5 ? '🟡' : '❌'} ${esc(q.pregunta)}</h3>
     <p><b>Tu respuesta:</b> ${esc(q.respuesta) || '<span class="mut">(vacía)</span>'}</p><div class="modelo"><b>Respuesta modelo</b><p>${esc(q.modelo)}</p></div></div>`).join('')}
-  <button class="btn" onclick="inicio()">${esProfe() ? 'Volver al panel' : 'Volver a los exámenes'}</button>`;
+  <button class="btn" onclick="${a.alumno ? 'vistaProfe' : 'vistaLista'}()">${a.alumno ? 'Volver al panel' : 'Volver a los exámenes'}</button>`;
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Vista del profesor: examen con respuestas ---------- */
+async function vistaSolucion(id) {
+  app.onclick = null; app.innerHTML = '<p class="mut">Cargando examen…</p>';
+  let ex; try { ex = await getJSON(`${RUTA}/${nivel}/${id}.json`); } catch (e) { app.innerHTML = '<p class="err">No se ha podido abrir el examen.</p>'; return; }
+  const t = ex.test || [], d = ex.desarrollo || [];
+  app.innerHTML = `<h2>${esc(ex.titulo)}</h2><p class="mut">Vista del profesor: las respuestas correctas aparecen marcadas.</p>
+  ${t.length ? `<h3 class="mut">Test · ${t.length} preguntas</h3>` : ''}
+  ${t.map((q, i) => `<div class="card"><h3>${i + 1}. ${esc(q.pregunta)}</h3>${q.opciones.map((o, j) => `<p style="margin:4px 0" class="${j === q.correcta ? 'ok' : ''}">${j === q.correcta ? '✅' : '▫️'} ${esc(o)}</p>`).join('')}${q.explicacion ? `<p class="mut">${esc(q.explicacion)}</p>` : ''}</div>`).join('')}
+  ${d.length ? `<h3 class="mut">Desarrollo · ${d.length} preguntas</h3>` : ''}
+  ${d.map((q, i) => `<div class="card"><h3>${t.length + i + 1}. ${esc(q.pregunta)}</h3><div class="modelo"><b>Respuesta modelo</b><p>${esc(q.respuesta_modelo)}</p></div></div>`).join('')}
+  <button class="btn" onclick="vistaLista()">Volver a los exámenes</button>`;
   window.scrollTo(0, 0);
 }
 
