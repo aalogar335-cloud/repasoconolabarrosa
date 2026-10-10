@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Conocimiento del Medio · Exámenes de práctica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito+Sans:wght@400;600;800&display=swap" media="print" onload="this.media='all'">
 <style>
 @property --p{syntax:'<number>';inherits:false;initial-value:0}
 :root{--bg:#f2f6f5;--card:#fff;--ink:#12312d;--mut:#52695f;--line:#dbe5e2;
@@ -20,6 +20,9 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 var(--fb)}
+.cc{padding:7px 16px;text-align:center;font-size:.78rem;line-height:1.5;color:var(--mut);background:var(--bg);border-bottom:1px solid var(--line)}
+.cc a{color:var(--acc-t)}
+.cc img{vertical-align:middle;background:#fff;border-radius:50%}
 header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:12px max(16px,calc((100% - 720px)/2));background:var(--card);border-bottom:2px solid var(--line)}
 .brand{display:flex;align-items:center;gap:10px;font:600 1.15rem/1.1 var(--fd)}
 .logo{display:grid;place-items:center;width:40px;height:40px;border-radius:13px;background:var(--acc-soft);font-size:1.4rem}
@@ -127,10 +130,11 @@ details.card[open] summary{margin-bottom:14px}
 </style>
 </head>
 <body>
+<div class="cc"><a href="https://aalogar335-cloud.github.io/repasoconolabarrosa/">Repaso Conocimiento del medio</a> © 2026 by <a href="https://example.com">Andrés Alonso</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nd.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div>
 <header><div class="brand"><span class="logo" aria-hidden="true">🌍</span>Conocimiento del Medio</div><nav id="nav" hidden>
 <button data-go="profe" hidden>Mis alumnos</button><button data-go="lista">Exámenes</button><button data-go="res">Mis resultados</button><button data-go="out">Salir</button></nav></header>
 <main id="app"></main>
-<footer>Versión 5</footer>
+<footer>Versión 5.2</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script>
@@ -205,10 +209,10 @@ async function vistaLista() {
   <h2>Elige un examen</h2><div id="lista" class="mut">Cargando…</div>`;
   app.querySelectorAll('.seg button').forEach(b => b.onclick = () => { nivel = b.dataset.n; try { localStorage.setItem('nivel', nivel); } catch (e) {} vistaLista(); });
   try {
-    const idx = await getJSON(`${RUTA}/${nivel}/index.json`);
-    const data = esProfe() ? [] : await intentos();
+    let idx; try { idx = await getJSON(`${RUTA}/${nivel}/index.json`); } catch (e) { $('#lista').innerHTML = `<p>No hay exámenes de ${nivelTxt(nivel)} de Primaria (no se encuentra <b>${RUTA}/${nivel}/index.json</b>). Prueba con el otro curso.</p>`; return; }
+    let data = []; if (!esProfe()) { try { data = await intentos(); } catch (e) {} }
     const ult = {}; (data || []).forEach(a => { ult[a.exam_id] ??= a; });
-    if (!idx.length) throw 0;
+    if (!idx.length) { $('#lista').innerHTML = `<p>Todavía no hay exámenes de ${nivelTxt(nivel)} de Primaria.</p>`; return; }
     $('#lista').className = '';
     if (esProfe()) {
       $('#lista').innerHTML = idx.map((x, i) => `<div class="exam t${i % 4}"><span class="ico">${IC[i % 4]}</span><span class="ttl"><b>${esc(x.titulo)}</b></span><span class="acts"><button class="sm" data-ver="${esc(x.id)}">Ver con respuestas</button><button class="sm pri" data-probar="${esc(x.id)}">Probar</button></span></div>`).join('')
@@ -220,13 +224,13 @@ async function vistaLista() {
     $('#lista').innerHTML = idx.map((x, i) => { const a = ult[`${nivel}/${x.id}`];
       return `<button class="exam t${i % 4}" data-id="${esc(x.id)}"><span class="ico">${IC[i % 4]}</span><span class="ttl"><b>${esc(x.titulo)}</b><small>${a ? 'Última vez: ' + fecha(a.created_at) : 'Todavía sin hacer'}</small></span><span class="badge ${a ? cls(nota(a)) : 'go'}" ${a ? '' : 'aria-label="Empezar"'}>${a ? fmt(nota(a)) : '▶'}</span></button>`; }).join('');
     $('#lista').querySelectorAll('button').forEach(b => b.onclick = () => vistaExamen(b.dataset.id));
-  } catch (e) { $('#lista').textContent = 'Todavía no hay exámenes para este curso.'; }
+  } catch (e) { $('#lista').innerHTML = `<p class="err">No se ha podido mostrar la lista: ${esc(e && e.message || e)}</p>`; }
 }
 
 /* ---------- Examen ---------- */
 async function vistaExamen(id) {
   app.innerHTML = '<p class="mut">Cargando examen…</p>';
-  let ex; try { ex = await getJSON(`${RUTA}/${nivel}/${id}.json`); } catch (e) { app.innerHTML = '<p class="err">No se ha podido abrir el examen. Vuelve a la lista e inténtalo de nuevo.</p>'; return; }
+  let ex; try { ex = await getJSON(`${RUTA}/${nivel}/${id}.json`); } catch (e) { app.innerHTML = `<p class="err">No se ha podido abrir el examen (${esc(RUTA + '/' + nivel + '/' + id + '.json')}). Vuelve a la lista e inténtalo de nuevo.</p><button class="btn" onclick="vistaLista()">Volver a los exámenes</button>`; return; }
   const test = (ex.test || []).map(q => ({ ...q, o: shuffle(q.opciones.map((t, i) => ({ t, ok: i === q.correcta }))) }));
   const dev = ex.desarrollo || [], ev = [];
   let tc = 0, dT = [], dO = [];
