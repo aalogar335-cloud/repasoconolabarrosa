@@ -1,0 +1,47 @@
+{
+  "id": "tema3-des2",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 2)",
+  "test": [],
+  "desarrollo": [
+    {
+      "pregunta": "Explica cuál es la función de los aparatos reproductores.",
+      "respuesta_modelo": "Los aparatos reproductores son necesarios para llevar a cabo la función de la reproducción, que permite tener descendientes semejantes a sus progenitores."
+    },
+    {
+      "pregunta": "Describe el recorrido de los espermatozoides desde que se forman hasta que salen al exterior del cuerpo.",
+      "respuesta_modelo": "Se forman en los testículos. Desde allí se dirigen a los conductos deferentes. Después, junto con el líquido de la próstata, forman el semen, que llega a la uretra. El semen se expulsa por el pene en la eyaculación."
+    },
+    {
+      "pregunta": "Explica la diferencia entre los caracteres sexuales primarios y los secundarios y pon un ejemplo de cada tipo.",
+      "respuesta_modelo": "Los primarios están presentes desde el nacimiento y son los aparatos reproductores (por ejemplo, los testículos o los ovarios). Los secundarios aparecen en la pubertad (por ejemplo, el vello en las axilas, el desarrollo de las mamas o los cambios en la voz)."
+    },
+    {
+      "pregunta": "Explica qué es la menopausia y a partir de qué edad aproximadamente ocurre.",
+      "respuesta_modelo": "A partir de los 50 años aproximadamente, las mujeres dejan de producir óvulos maduros y se interrumpe la menstruación. Eso es la menopausia."
+    },
+    {
+      "pregunta": "Explica qué significa que los seres humanos tenemos fecundación interna y cómo se consigue.",
+      "respuesta_modelo": "Significa que el encuentro del óvulo y del espermatozoide se produce en el interior del cuerpo de la mujer. Para ello es necesario que los espermatozoides se depositen en la vagina, lo que se consigue mediante la unión sexual del hombre con la mujer, que se llama coito."
+    },
+    {
+      "pregunta": "Explica para qué sirven la bolsa amniótica y el líquido amniótico durante el embarazo.",
+      "respuesta_modelo": "Dentro del útero, el embrión está en el interior de una bolsa llena de líquido, la bolsa amniótica y el líquido amniótico, que lo protege."
+    },
+    {
+      "pregunta": "Explica en qué consiste la fase del parto que se conoce como alumbramiento.",
+      "respuesta_modelo": "Es la fase del parto en la que se expulsa la placenta. Una vez que el bebé nace, el útero sigue contrayéndose hasta que la placenta se desprende y se expulsa al exterior junto con los restos del cordón umbilical."
+    },
+    {
+      "pregunta": "Explica de qué formas se puede alimentar a un bebé recién nacido.",
+      "respuesta_modelo": "Desde el ámbito médico se recomienda alimentarlo con leche materna, pero también existe la posibilidad de alimentarlo con leche preparada especialmente para recién nacidos."
+    },
+    {
+      "pregunta": "Explica qué tipo de ropa interior conviene utilizar y por qué.",
+      "respuesta_modelo": "Conviene utilizar ropa interior de tejidos naturales. La ropa muy ajustada y de tejidos sintéticos favorece la humedad y el calor, y eso crea las condiciones adecuadas para que crezcan microorganismos."
+    },
+    {
+      "pregunta": "Pon dos ejemplos de comportamientos que muestren madurez.",
+      "respuesta_modelo": "Por ejemplo: controlar mi enfado y no ponerme a chillar ni gritar, y escuchar las razones que dan los demás. Valen otros ejemplos razonables."
+    }
+  ]
+}

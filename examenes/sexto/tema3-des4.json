@@ -1,0 +1,47 @@
+{
+  "id": "tema3-des4",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 4)",
+  "test": [],
+  "desarrollo": [
+    {
+      "pregunta": "Explica en qué se diferencia la producción de óvulos y de espermatozoides a lo largo de la vida.",
+      "respuesta_modelo": "Los óvulos están en los ovarios desde el nacimiento y maduran a partir de la pubertad, mientras que los espermatozoides se producen constantemente en los testículos a partir de la pubertad."
+    },
+    {
+      "pregunta": "Explica qué papel tiene la uretra en el aparato reproductor masculino.",
+      "respuesta_modelo": "Es un conducto que también forma parte del aparato urinario. En el aparato reproductor conduce los espermatozoides, junto con el líquido de la próstata, al exterior."
+    },
+    {
+      "pregunta": "Explica qué es el flujo vaginal y cuál es su función.",
+      "respuesta_modelo": "Es una secreción normal de color transparente o blanquecino que procede del cuello del útero y de las paredes de la vagina. Ayuda a mantener sanos y lubricados los tejidos y los protege frente a infecciones."
+    },
+    {
+      "pregunta": "Explica cómo son los espermatozoides y para qué les sirve la cola.",
+      "respuesta_modelo": "Son muy pequeños y tienen una cabeza y una cola larga que utilizan para desplazarse."
+    },
+    {
+      "pregunta": "Describe qué ocurre en la trompa de Falopio cuando los espermatozoides se encuentran con el óvulo maduro.",
+      "respuesta_modelo": "Por lo general, solo uno de los espermatozoides penetra en el óvulo y se produce la fecundación. Tras la fecundación se forma el cigoto, la primera célula del nuevo ser."
+    },
+    {
+      "pregunta": "Define qué es el embarazo y explica qué hace el útero durante ese tiempo.",
+      "respuesta_modelo": "Es el periodo de tiempo que transcurre desde la fecundación hasta el nacimiento y dura nueve meses. Durante él, el útero nutre y protege al embrión que crece en su interior."
+    },
+    {
+      "pregunta": "Compara la fase de dilatación con la de expulsión del parto.",
+      "respuesta_modelo": "En la dilatación, que es la primera fase y la más larga, el cuello del útero se dilata poco a poco y las paredes del útero se contraen para empujar al feto hacia la vagina. En la expulsión, el útero y los músculos del abdomen empujan con fuerza para que el bebé salga al exterior; el bebé comienza a respirar y se corta el cordón umbilical."
+    },
+    {
+      "pregunta": "Explica qué cuidados de higiene se recomiendan durante la menstruación.",
+      "respuesta_modelo": "Durante la menstruación es recomendable aumentar la higiene. Si se utilizan tampones, copas o compresas, deben cambiarse con la frecuencia adecuada."
+    },
+    {
+      "pregunta": "Explica por qué es importante realizar las revisiones médicas y recibir las vacunas recomendadas.",
+      "respuesta_modelo": "Las revisiones médicas son imprescindibles para detectar a tiempo algunas enfermedades, como el cáncer de mama o el de próstata. Las vacunas son muy importantes para evitar padecer enfermedades que pueden ser graves."
+    },
+    {
+      "pregunta": "Explica por qué es importante aprender a conocer y controlar nuestras emociones durante la adolescencia.",
+      "respuesta_modelo": "En la adolescencia podemos notar cambios de humor y sentirnos más irritables, incomprendidos, tristes o alegres. Por eso es importante que aprendamos a conocernos y a controlar, identificar y gestionar nuestras emociones."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "tema3-test2",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 2)",
+  "test": [
+    {
+      "pregunta": "¿Qué conducto femenino se comunica con el útero y con el exterior del cuerpo?",
+      "opciones": [
+        "La trompa de Falopio.",
+        "La uretra.",
+        "La vagina."
+      ],
+      "correcta": 2,
+      "explicacion": "La vagina es un conducto que se comunica con el útero y con el exterior del cuerpo."
+    },
+    {
+      "pregunta": "¿Qué protegen los labios mayores y los labios menores?",
+      "opciones": [
+        "Los ovarios y las trompas.",
+        "El clítoris y la entrada a la vagina.",
+        "El útero y la placenta."
+      ],
+      "correcta": 1,
+      "explicacion": "Los labios mayores y menores protegen el clítoris y la entrada a la vagina."
+    },
+    {
+      "pregunta": "¿Qué conducto lleva los espermatozoides desde los testículos hasta la uretra?",
+      "opciones": [
+        "El conducto deferente.",
+        "La trompa de Falopio.",
+        "El escroto."
+      ],
+      "correcta": 0,
+      "explicacion": "Los conductos deferentes conducen los espermatozoides desde los testículos hasta la uretra."
+    },
+    {
+      "pregunta": "¿Cómo se llama el extremo del pene, cubierto por el prepucio?",
+      "opciones": [
+        "El escroto.",
+        "La próstata.",
+        "El glande."
+      ],
+      "correcta": 2,
+      "explicacion": "El pene termina en el glande, que está cubierto por un pliegue de piel llamado prepucio."
+    },
+    {
+      "pregunta": "¿Qué cambio es un carácter sexual secundario en las niñas?",
+      "opciones": [
+        "Se ensanchan las caderas.",
+        "La voz se hace más grave.",
+        "Crece vello en la cara."
+      ],
+      "correcta": 0,
+      "explicacion": "En las niñas se ensanchan las caderas, crecen las mamas y surge el vello en el pubis y las axilas."
+    },
+    {
+      "pregunta": "¿Cómo es un óvulo comparado con un espermatozoide?",
+      "opciones": [
+        "Más pequeño y con cola.",
+        "Más grande y redondeado.",
+        "Del mismo tamaño y con cola."
+      ],
+      "correcta": 1,
+      "explicacion": "El óvulo es grande y redondeado; los espermatozoides son pequeños y tienen una cola para desplazarse."
+    },
+    {
+      "pregunta": "¿Qué es el semen?",
+      "opciones": [
+        "La mezcla de los espermatozoides con el líquido de la próstata.",
+        "El líquido que protege al embrión.",
+        "La leche que produce la madre."
+      ],
+      "correcta": 0,
+      "explicacion": "Los espermatozoides, junto con el líquido de la próstata, forman el semen."
+    },
+    {
+      "pregunta": "¿Cómo se llama la fase del parto en la que se expulsa la placenta?",
+      "opciones": [
+        "Dilatación.",
+        "Expulsión.",
+        "Alumbramiento."
+      ],
+      "correcta": 2,
+      "explicacion": "En el alumbramiento la placenta se desprende de la pared del útero y se expulsa al exterior."
+    },
+    {
+      "pregunta": "¿Qué es la lactancia?",
+      "opciones": [
+        "La fase del parto en la que sale el bebé.",
+        "La etapa en la que el bebé se alimenta solo de leche.",
+        "El periodo de nueve meses del embarazo."
+      ],
+      "correcta": 1,
+      "explicacion": "Durante los primeros meses de vida los bebés se alimentan solo de leche; esa etapa se llama lactancia."
+    },
+    {
+      "pregunta": "¿Cómo deben limpiarse las mujeres la zona del ano?",
+      "opciones": [
+        "Arrastrando siempre el papel hacia atrás.",
+        "Arrastrando siempre el papel hacia delante.",
+        "Moviendo el papel de un lado a otro."
+      ],
+      "correcta": 0,
+      "explicacion": "Así se evita contaminar la zona de entrada de la vagina."
+    }
+  ],
+  "desarrollo": []
+}

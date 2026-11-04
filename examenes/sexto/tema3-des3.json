@@ -1,0 +1,47 @@
+{
+  "id": "tema3-des3",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 3)",
+  "test": [],
+  "desarrollo": [
+    {
+      "pregunta": "Explica qué es la vulva y cómo está formada.",
+      "respuesta_modelo": "La vulva es el conjunto de órganos femeninos que son visibles. Está formada por unos pliegues de piel, los labios mayores y los menores, que protegen un órgano llamado clítoris y la entrada a la vagina."
+    },
+    {
+      "pregunta": "Nombra cuatro órganos del aparato reproductor masculino y explica qué hace cada uno.",
+      "respuesta_modelo": "Por ejemplo: los testículos (producen los espermatozoides y están dentro de una bolsa llamada escroto), los conductos deferentes (conducen los espermatozoides hasta la uretra), la próstata (produce un líquido que sirve a los espermatozoides de alimento y transporte), la uretra (conduce los espermatozoides junto con el líquido de la próstata al exterior) y el pene (órgano externo que rodea la uretra)."
+    },
+    {
+      "pregunta": "Explica qué es la pubertad y cuándo suele iniciarse.",
+      "respuesta_modelo": "Es el periodo en el que maduran los aparatos reproductores y se producen cambios en nuestro cuerpo que hacen posible la función reproductora. Suele iniciarse a partir de los 10 años, aunque en algunas personas se puede adelantar o retrasar."
+    },
+    {
+      "pregunta": "Explica qué es el semen y qué es la eyaculación.",
+      "respuesta_modelo": "El semen se forma cuando los espermatozoides se unen al líquido de la próstata, y llega a la uretra. La eyaculación es la expulsión del semen por el pene; en cada una se liberan millones de espermatozoides."
+    },
+    {
+      "pregunta": "Describe el recorrido del óvulo y de los espermatozoides hasta que se encuentran y se produce la fecundación.",
+      "respuesta_modelo": "El óvulo maduro sale del ovario y pasa a la trompa de Falopio. Los espermatozoides son expulsados en la eyaculación y, una vez en el interior del cuerpo de la mujer, recorren la vagina, el útero y llegan a la trompa de Falopio, donde se encuentran con el óvulo."
+    },
+    {
+      "pregunta": "Describe cómo evoluciona el embrión desde que llega al útero hasta que se transforma en un bebé.",
+      "respuesta_modelo": "El embrión recorre las trompas y unos días después llega al útero. Allí se adhiere a su pared y continúa creciendo y desarrollándose hasta transformarse en un bebé."
+    },
+    {
+      "pregunta": "Explica qué es el feto y cómo es a los nueve meses de embarazo.",
+      "respuesta_modelo": "A los tres meses el embrión recibe el nombre de feto: ya se pueden distinguir todas sus partes, como los brazos o los dedos, y es posible identificar los órganos. A los nueve meses mide unos 50 cm, pesa alrededor de 3 kg y ya está preparado para nacer."
+    },
+    {
+      "pregunta": "Explica qué significa «romper aguas» y qué ocurre en la fase de expulsión del parto.",
+      "respuesta_modelo": "Romper aguas es la rotura de la bolsa y la salida del líquido amniótico por la vagina, una de las señales del inicio del parto. En la expulsión, el útero y los músculos del abdomen de la madre empujan con fuerza para que el bebé salga al exterior; el bebé comienza a respirar y se corta el cordón umbilical."
+    },
+    {
+      "pregunta": "Explica cómo deben limpiarse las mujeres la zona del ano y por qué.",
+      "respuesta_modelo": "Siempre arrastrando el papel hacia atrás. Así se evita contaminar la zona de entrada de la vagina."
+    },
+    {
+      "pregunta": "Explica por qué son importantes las amistades en la adolescencia y a quién conviene preguntar las dudas.",
+      "respuesta_modelo": "En la adolescencia las amistades adquieren mucha importancia y nos apoyamos en ellas. Sin embargo, hay dudas que debemos preguntar a los adultos en los que confiemos, ya que disponen de más conocimientos para resolverlas."
+    }
+  ]
+}

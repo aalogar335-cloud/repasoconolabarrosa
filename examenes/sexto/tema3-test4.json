@@ -1,0 +1,107 @@
+{
+  "id": "tema3-test4",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 4)",
+  "test": [
+    {
+      "pregunta": "La función de reproducción permite…",
+      "opciones": [
+        "tener descendientes semejantes a sus progenitores.",
+        "crecer más deprisa.",
+        "respirar mejor."
+      ],
+      "correcta": 0,
+      "explicacion": "La reproducción permite tener descendientes semejantes a sus progenitores."
+    },
+    {
+      "pregunta": "¿Cuándo maduran los aparatos reproductores?",
+      "opciones": [
+        "Al nacer.",
+        "En la pubertad.",
+        "En la edad adulta."
+      ],
+      "correcta": 1,
+      "explicacion": "Los aparatos reproductores no maduran hasta la pubertad."
+    },
+    {
+      "pregunta": "¿Cómo se forman los espermatozoides a partir de la pubertad?",
+      "opciones": [
+        "De forma continua.",
+        "Solo una vez al mes.",
+        "Solo hasta los 50 años."
+      ],
+      "correcta": 0,
+      "explicacion": "A partir de la pubertad los espermatozoides se forman continuamente en los testículos."
+    },
+    {
+      "pregunta": "¿Cómo se llama la expulsión del semen por el pene?",
+      "opciones": [
+        "Dilatación.",
+        "Menstruación.",
+        "Eyaculación."
+      ],
+      "correcta": 2,
+      "explicacion": "El semen se expulsa por el pene en la eyaculación, y en cada una se liberan millones de espermatozoides."
+    },
+    {
+      "pregunta": "¿Cuánto mide y pesa, aproximadamente, el feto a los nueve meses?",
+      "opciones": [
+        "Unos 20 cm y 1 kg.",
+        "Unos 50 cm y 3 kg.",
+        "Unos 90 cm y 8 kg."
+      ],
+      "correcta": 1,
+      "explicacion": "A los nueve meses el feto mide unos 50 cm, pesa alrededor de 3 kg y ya está preparado para nacer."
+    },
+    {
+      "pregunta": "¿Qué ocurre en la fase de expulsión del parto?",
+      "opciones": [
+        "El feto sale del cuerpo de la madre y comienza a respirar.",
+        "Se expulsa la placenta.",
+        "Se rompe la bolsa del líquido amniótico."
+      ],
+      "correcta": 0,
+      "explicacion": "En la expulsión el útero y los músculos del abdomen empujan con fuerza; el feto sale y comienza a respirar, y se corta el cordón umbilical."
+    },
+    {
+      "pregunta": "Desde el ámbito médico, ¿qué se recomienda para alimentar al bebé?",
+      "opciones": [
+        "Solo agua con azúcar.",
+        "La leche materna.",
+        "Cualquier alimento sólido."
+      ],
+      "correcta": 1,
+      "explicacion": "Se recomienda la leche materna, aunque también existe la posibilidad de usar leche preparada para recién nacidos."
+    },
+    {
+      "pregunta": "¿Qué enfermedad se puede detectar a tiempo con las revisiones periódicas en los hombres?",
+      "opciones": [
+        "El cáncer de próstata.",
+        "El cáncer de mama.",
+        "La menopausia."
+      ],
+      "correcta": 0,
+      "explicacion": "Las revisiones periódicas permiten detectar a tiempo enfermedades como el cáncer de mama en las mujeres y el de próstata en los hombres."
+    },
+    {
+      "pregunta": "¿Qué es importante que aprendamos a hacer con nuestras emociones en la adolescencia?",
+      "opciones": [
+        "Conocerlas, identificarlas y controlarlas.",
+        "Ocultarlas siempre.",
+        "Ignorarlas."
+      ],
+      "correcta": 0,
+      "explicacion": "Es importante que aprendamos a conocernos y a controlar, identificar y gestionar nuestras emociones."
+    },
+    {
+      "pregunta": "¿Qué tienen en común los aparatos reproductores masculino y femenino?",
+      "opciones": [
+        "Los dos producen células sexuales.",
+        "Los dos producen el mismo tipo de célula sexual.",
+        "Los dos están formados por los mismos órganos."
+      ],
+      "correcta": 0,
+      "explicacion": "Los dos aparatos producen células sexuales, aunque distintas, y ambos son necesarios para la reproducción."
+    }
+  ],
+  "desarrollo": []
+}

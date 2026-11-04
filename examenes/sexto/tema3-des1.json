@@ -1,0 +1,47 @@
+{
+  "id": "tema3-des1",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 1)",
+  "test": [],
+  "desarrollo": [
+    {
+      "pregunta": "¿Qué tienen en común el aparato reproductor masculino y el femenino?",
+      "respuesta_modelo": "Los dos aparatos producen células sexuales, y ambos son necesarios y participan en la función de la reproducción."
+    },
+    {
+      "pregunta": "Describe qué hacen los ovarios, las trompas de Falopio y el útero.",
+      "respuesta_modelo": "Ovarios: en su interior se forman las células sexuales femeninas, los óvulos. Trompas de Falopio: cada una abraza un ovario y lo comunica con el útero. Útero: es un órgano muscular hueco en cuyo interior crecen los bebés hasta su nacimiento."
+    },
+    {
+      "pregunta": "Describe los caracteres sexuales secundarios que aparecen en las niñas y en los niños durante la pubertad.",
+      "respuesta_modelo": "En las niñas se ensanchan las caderas, crecen las mamas y surge el vello en el pubis y las axilas. En los niños la voz se hace más grave, crece vello en la cara y en otras partes del cuerpo, y se desarrollan los músculos."
+    },
+    {
+      "pregunta": "Compara los óvulos con los espermatozoides: ¿qué tienen en común y en qué se diferencian?",
+      "respuesta_modelo": "Los dos son células sexuales y participan en la reproducción. Los óvulos están en los ovarios desde el nacimiento y maduran a partir de la pubertad, mientras que los espermatozoides se producen constantemente en los testículos. Su forma y tamaño también son distintos: el óvulo es grande y redondeado, y los espermatozoides son pequeños y tienen una cola para desplazarse."
+    },
+    {
+      "pregunta": "¿Qué es el cigoto y qué ocurre con él después de la fecundación hasta que llega al útero?",
+      "respuesta_modelo": "El cigoto es la nueva célula que se forma al unirse un óvulo y un espermatozoide; es la primera célula del nuevo ser. Se divide en dos, luego en cuatro y sigue dividiéndose hasta formar el embrión, una masa redondeada de células. El embrión recorre las trompas y unos días después llega al útero."
+    },
+    {
+      "pregunta": "Define qué es la placenta y cuál es su función.",
+      "respuesta_modelo": "La placenta es un órgano que se forma en la pared del útero, que se conecta con el feto mediante el cordón umbilical y que proporciona oxígeno y nutrientes al embrión."
+    },
+    {
+      "pregunta": "Explica en qué consiste la dilatación, la primera fase del parto.",
+      "respuesta_modelo": "Es la primera fase del parto y la más larga. El cuello del útero se dilata poco a poco para que el feto pueda salir, y las paredes del útero se contraen para empujarlo hacia la vagina."
+    },
+    {
+      "pregunta": "Indica cuáles son las características de la leche materna.",
+      "respuesta_modelo": "La leche materna aporta al bebé todos los nutrientes que necesita y, además, le proporciona defensas contra muchas enfermedades."
+    },
+    {
+      "pregunta": "Explica por qué son necesarias las medidas de higiene en los genitales externos y cómo debe hacerse el aseo diario.",
+      "respuesta_modelo": "Los genitales externos están relacionados con el aparato urinario y tienen repliegues de piel donde pueden acumularse restos de orina y suciedad. Esto podría provocar irritaciones o favorecer el crecimiento de microorganismos. El aseo diario debe hacerse solo con agua, o con agua y jabón suave."
+    },
+    {
+      "pregunta": "Explica por qué no debe preocuparnos que los cambios de la adolescencia aparezcan antes o después que en otras personas.",
+      "respuesta_modelo": "Porque los cambios de la adolescencia no suceden a una edad concreta: algunas personas los experimentan antes y otras más tarde. No debe preocuparnos ni hacernos sentir diferentes, ya que cada persona tiene su propio ritmo de cambio."
+    }
+  ]
+}

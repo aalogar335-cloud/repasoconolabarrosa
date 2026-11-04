@@ -1,0 +1,107 @@
+{
+  "id": "tema3-test3",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 3)",
+  "test": [
+    {
+      "pregunta": "¿A partir de qué edad suele iniciarse la pubertad?",
+      "opciones": [
+        "A partir de los 5 años.",
+        "A partir de los 10 años.",
+        "A partir de los 20 años."
+      ],
+      "correcta": 1,
+      "explicacion": "La pubertad suele iniciarse a partir de los 10 años, aunque en algunas personas se puede adelantar o retrasar."
+    },
+    {
+      "pregunta": "¿Qué órgano masculino es externo y rodea la uretra?",
+      "opciones": [
+        "El pene.",
+        "La próstata.",
+        "El conducto deferente."
+      ],
+      "correcta": 0,
+      "explicacion": "El pene es un órgano externo que rodea la uretra."
+    },
+    {
+      "pregunta": "¿Qué conducto forma parte a la vez del aparato urinario y del aparato reproductor masculino?",
+      "opciones": [
+        "La uretra.",
+        "El conducto deferente.",
+        "El escroto."
+      ],
+      "correcta": 0,
+      "explicacion": "La uretra también forma parte del aparato urinario y conduce los espermatozoides al exterior."
+    },
+    {
+      "pregunta": "¿Qué caracteres sexuales secundarios aparecen en los niños?",
+      "opciones": [
+        "La voz más grave, vello en la cara y desarrollo de los músculos.",
+        "Ensanchamiento de las caderas y crecimiento de las mamas.",
+        "Aparición de los testículos y del escroto."
+      ],
+      "correcta": 0,
+      "explicacion": "En los niños la voz se hace más grave, crece vello en la cara y en otras partes del cuerpo, y se desarrollan los músculos."
+    },
+    {
+      "pregunta": "¿Qué es la menopausia?",
+      "opciones": [
+        "La etapa en que las mujeres dejan de producir óvulos maduros y se interrumpe la menstruación.",
+        "La primera menstruación de una mujer.",
+        "El momento en que el óvulo sale del ovario."
+      ],
+      "correcta": 0,
+      "explicacion": "A partir de los 50 años aproximadamente, las mujeres dejan de producir óvulos maduros y se interrumpe la menstruación."
+    },
+    {
+      "pregunta": "¿Dónde se adhiere el embrión para seguir creciendo?",
+      "opciones": [
+        "A la pared de la vagina.",
+        "A la pared de la trompa de Falopio.",
+        "A la pared del útero."
+      ],
+      "correcta": 2,
+      "explicacion": "El embrión llega al útero, se adhiere a su pared y continúa creciendo y desarrollándose hasta transformarse en un bebé."
+    },
+    {
+      "pregunta": "¿Qué rodea y protege al embrión dentro del útero?",
+      "opciones": [
+        "El cordón umbilical.",
+        "La bolsa y el líquido amniótico.",
+        "El cuello del útero."
+      ],
+      "correcta": 1,
+      "explicacion": "El embrión está en el interior de una bolsa llena de líquido que lo protege: la bolsa y el líquido amniótico."
+    },
+    {
+      "pregunta": "¿Cuál es la primera fase del parto y la más larga?",
+      "opciones": [
+        "La dilatación.",
+        "La expulsión.",
+        "El alumbramiento."
+      ],
+      "correcta": 0,
+      "explicacion": "La dilatación es la primera fase del parto y la más larga."
+    },
+    {
+      "pregunta": "La leche materna contiene todos los nutrientes que necesita el bebé y también…",
+      "opciones": [
+        "defensas contra muchas enfermedades.",
+        "menos nutrientes que la leche preparada.",
+        "sustancias que producen sueño."
+      ],
+      "correcta": 0,
+      "explicacion": "La leche materna aporta todos los nutrientes y defensas contra muchas enfermedades."
+    },
+    {
+      "pregunta": "¿Qué tipo de ropa interior conviene utilizar?",
+      "opciones": [
+        "La de tejidos naturales.",
+        "La muy ajustada.",
+        "La de tejidos sintéticos."
+      ],
+      "correcta": 0,
+      "explicacion": "La ropa muy ajustada y de tejidos sintéticos favorece la humedad y el calor, y eso hace que crezcan microorganismos."
+    }
+  ],
+  "desarrollo": []
+}

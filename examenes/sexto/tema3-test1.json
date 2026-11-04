@@ -1,0 +1,107 @@
+{
+  "id": "tema3-test1",
+  "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 1)",
+  "test": [
+    {
+      "pregunta": "¿Qué órganos abrazan a cada ovario y lo comunican con el útero?",
+      "opciones": [
+        "Los conductos deferentes.",
+        "Las trompas de Falopio.",
+        "Los labios menores."
+      ],
+      "correcta": 1,
+      "explicacion": "Cada una de las trompas de Falopio abraza un ovario y lo comunica con el útero."
+    },
+    {
+      "pregunta": "¿Cómo se llama la bolsa de piel que contiene los testículos?",
+      "opciones": [
+        "El escroto.",
+        "El prepucio.",
+        "La próstata."
+      ],
+      "correcta": 0,
+      "explicacion": "Los testículos están dentro de una bolsa llamada escroto."
+    },
+    {
+      "pregunta": "¿Qué hace la próstata?",
+      "opciones": [
+        "Produce los espermatozoides.",
+        "Conduce los espermatozoides hasta la uretra.",
+        "Produce un líquido que sirve de alimento y transporte a los espermatozoides."
+      ],
+      "correcta": 2,
+      "explicacion": "La próstata produce un líquido que sirve a los espermatozoides de alimento y transporte. Ese líquido se vacía en la uretra."
+    },
+    {
+      "pregunta": "¿Cuáles son los caracteres sexuales primarios?",
+      "opciones": [
+        "Los aparatos reproductores.",
+        "El vello y el cambio de voz.",
+        "Las mamas y las caderas."
+      ],
+      "correcta": 0,
+      "explicacion": "Los caracteres sexuales primarios están presentes desde el nacimiento y son los aparatos reproductores."
+    },
+    {
+      "pregunta": "Aproximadamente a los 14 días, el óvulo maduro…",
+      "opciones": [
+        "sale del ovario y es recogido por la trompa.",
+        "sale al exterior con restos de sangre.",
+        "empieza a madurar en el ovario."
+      ],
+      "correcta": 0,
+      "explicacion": "A los 14 días el óvulo maduro sale del ovario y es recogido por la trompa."
+    },
+    {
+      "pregunta": "¿Cuántas personas participan en la reproducción sexual de los seres humanos?",
+      "opciones": [
+        "Una sola persona.",
+        "Dos, de distinto sexo.",
+        "Tres o más personas."
+      ],
+      "correcta": 1,
+      "explicacion": "En la reproducción sexual participan dos personas de distinto sexo."
+    },
+    {
+      "pregunta": "¿Qué nombre recibe el embrión a partir de los tres meses?",
+      "opciones": [
+        "Cigoto.",
+        "Folículo.",
+        "Feto."
+      ],
+      "correcta": 2,
+      "explicacion": "A los tres meses el embrión recibe el nombre de feto."
+    },
+    {
+      "pregunta": "¿Qué significa «romper aguas»?",
+      "opciones": [
+        "Que se rompe la bolsa y sale el líquido amniótico por la vagina.",
+        "Que el bebé comienza a respirar.",
+        "Que se corta el cordón umbilical."
+      ],
+      "correcta": 0,
+      "explicacion": "La rotura de la bolsa y la salida del líquido amniótico por la vagina es una de las señales del inicio del parto."
+    },
+    {
+      "pregunta": "¿Cómo se recomienda hacer el aseo diario de los genitales externos?",
+      "opciones": [
+        "Solo con agua, o con agua y jabón suave.",
+        "Con jabones fuertes y perfumes.",
+        "Solo una vez a la semana."
+      ],
+      "correcta": 0,
+      "explicacion": "Es aconsejable el aseo diario solo con agua, o con agua y jabón suave."
+    },
+    {
+      "pregunta": "¿Entre qué edades transcurre la adolescencia?",
+      "opciones": [
+        "Entre los 5 y los 10 años.",
+        "Entre los 10 y los 19 años.",
+        "Entre los 20 y los 30 años."
+      ],
+      "correcta": 1,
+      "explicacion": "La adolescencia transcurre entre los 10 y los 19 años."
+    }
+  ],
+  "desarrollo": []
+}
