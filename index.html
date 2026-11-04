@@ -134,7 +134,7 @@ details.card[open] summary{margin-bottom:14px}
 <header><div class="brand"><span class="logo" aria-hidden="true">🌍</span>Conocimiento del Medio</div><nav id="nav" hidden>
 <button data-go="profe" hidden>Mis alumnos</button><button data-go="lista">Exámenes</button><button data-go="res">Mis resultados</button><button data-go="out">Salir</button></nav></header>
 <main id="app"></main>
-<footer>Versión 5.2</footer>
+<footer>Versión 5.3</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script>
@@ -300,7 +300,7 @@ function vistaRevision(a, aviso) {
   app.innerHTML = `${aviso ? `<p class="${aviso.startsWith('Modo') ? 'mut' : 'err'}" role="alert">${esc(aviso)}</p>` : ''}
   <div class="card score ${c}"><div class="ring ${c}" style="--p:${Math.round(n * 10)}"><b>${fmt(n)}</b><span>de 10</span></div>
   <div><h2>${esc(a.exam_title)}</h2><p class="msg">${msg}</p>
-  <div class="chips">${a.alumno ? `<span class="chip">${esc(a.alumno)}</span>` : ''}<span class="chip">${fecha(a.created_at)}</span><span class="chip">Test <b>${a.test_correct}</b> de ${a.test_total}</span><span class="chip">Desarrollo <b>${fmt(Number(a.open_score))}</b> de ${a.open_total}</span></div></div></div>
+  <div class="chips">${a.alumno ? `<span class="chip">${esc(a.alumno)}</span>` : ''}<span class="chip">${fecha(a.created_at)}</span>${a.test_total ? `<span class="chip">Test <b>${a.test_correct}</b> de ${a.test_total}</span>` : ''}${a.open_total ? `<span class="chip">Desarrollo <b>${fmt(Number(a.open_score))}</b> de ${a.open_total}</span>` : ''}</div></div></div>
   ${d.test.length ? '<h3>Test</h3>' : ''}
   ${d.test.map((q, i) => `<div class="card q res ${q.ok ? 'good' : 'wrong'}"><h3><span class="num">${i + 1}</span><span>${esc(q.pregunta)}</span></h3>
     <p>Tu respuesta: <b class="${q.ok ? 'ok' : 'bad'}">${q.ok ? '✅' : '❌'} ${esc(q.elegida ?? 'Sin responder')}</b></p>
