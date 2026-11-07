@@ -69,6 +69,16 @@ button.exam:hover{border-color:var(--acc)}
 .badge.go{display:grid;place-items:center;width:40px;height:40px;padding:0;border-radius:50%;font-size:.9rem}
 .badge.ok{background:var(--ok-soft);color:var(--ok)}.badge.mid{background:var(--mid-soft);color:var(--mid)}.badge.bad{background:var(--bad-soft);color:var(--bad)}
 .acts{display:flex;gap:8px;flex-wrap:wrap}
+.tema{padding:16px}
+.tema .ico{width:60px;height:60px;font-size:2rem;border-radius:18px}
+.ttl .k{display:block;color:var(--acc-t);font:600 .9rem var(--fd);margin-bottom:2px}
+.tema .ttl b{font-size:1.2rem}
+.mini{display:flex;align-items:center;gap:10px;margin-top:8px}
+.mini .bar{height:8px}
+.mini small{white-space:nowrap}
+.back{border:0;background:none;color:var(--acc-t);font:600 1rem var(--fd);padding:4px 0;margin:0 0 8px}
+.back:hover{text-decoration:underline}
+.kicker{display:block;color:var(--mut);font:600 1rem var(--fb);margin-bottom:2px}
 @media(max-width:520px){.exam{flex-wrap:wrap}.acts{flex-basis:100%}}
 .opt{display:flex;align-items:center;gap:12px;margin-bottom:9px;padding:11px 14px;border:2px solid var(--line);border-radius:14px;font-weight:400;cursor:pointer;transition:border-color .12s,background .12s}
 .opt input{position:absolute;opacity:0;pointer-events:none}
@@ -134,7 +144,7 @@ details.card[open] summary{margin-bottom:14px}
 <header><div class="brand"><span class="logo" aria-hidden="true">🌍</span>Conocimiento del Medio</div><nav id="nav" hidden>
 <button data-go="profe" hidden>Mis alumnos</button><button data-go="lista">Exámenes</button><button data-go="res">Mis resultados</button><button data-go="out">Salir</button></nav></header>
 <main id="app"></main>
-<footer>Versión 5.3</footer>
+<footer>Versión 6</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
 <script>
@@ -203,34 +213,58 @@ function vistaLogin() {
 }
 
 /* ---------- Lista de exámenes ---------- */
+let temaActual = null; const cacheTemas = {};
+async function cargarTemas() {
+  if (cacheTemas[nivel]) return cacheTemas[nivel];
+  const idx = await getJSON(`${RUTA}/${nivel}/index.json`);
+  return (cacheTemas[nivel] = idx.length && idx[0].examenes ? idx : [{ tema: 'Exámenes', titulo: '', examenes: idx }]);
+}
+function volver() { temaActual !== null ? vistaTema(temaActual) : vistaLista(); }
+const tinte = (x, k) => /^test/i.test(x.titulo) ? 0 : /^desarrollo/i.test(x.titulo) ? 1 : k % 4;
+const iconoExamen = (x, k) => /^test/i.test(x.titulo) ? '✅' : /^desarrollo/i.test(x.titulo) ? '✍️' : IC[k % 4];
+
 async function vistaLista() {
-  nav(true);
+  nav(true); temaActual = null; app.onclick = null;
   app.innerHTML = `<div class="seg">${['quinto','sexto'].map(n => `<button data-n="${n}" class="${n === nivel ? 'on' : ''}">${nivelTxt(n)} de Primaria</button>`).join('')}</div>
-  <h2>Elige un examen</h2><div id="lista" class="mut">Cargando…</div>`;
+  <h2>Elige un tema</h2><div id="lista" class="mut">Cargando…</div>`;
   app.querySelectorAll('.seg button').forEach(b => b.onclick = () => { nivel = b.dataset.n; try { localStorage.setItem('nivel', nivel); } catch (e) {} vistaLista(); });
   try {
-    let idx; try { idx = await getJSON(`${RUTA}/${nivel}/index.json`); } catch (e) { $('#lista').innerHTML = `<p>No hay exámenes de ${nivelTxt(nivel)} de Primaria (no se encuentra <b>${RUTA}/${nivel}/index.json</b>). Prueba con el otro curso.</p>`; return; }
+    let temas; try { temas = await cargarTemas(); } catch (e) { $('#lista').innerHTML = `<p>No hay exámenes de ${nivelTxt(nivel)} de Primaria (no se encuentra <b>${RUTA}/${nivel}/index.json</b>). Prueba con el otro curso.</p>`; return; }
+    if (!temas.length) { $('#lista').innerHTML = `<p>Todavía no hay exámenes de ${nivelTxt(nivel)} de Primaria.</p>`; return; }
     let data = []; if (!esProfe()) { try { data = await intentos(); } catch (e) {} }
-    const ult = {}; (data || []).forEach(a => { ult[a.exam_id] ??= a; });
-    if (!idx.length) { $('#lista').innerHTML = `<p>Todavía no hay exámenes de ${nivelTxt(nivel)} de Primaria.</p>`; return; }
+    const hechos = new Set(data.map(a => a.exam_id));
     $('#lista').className = '';
-    if (esProfe()) {
-      $('#lista').innerHTML = idx.map((x, i) => `<div class="exam t${i % 4}"><span class="ico">${IC[i % 4]}</span><span class="ttl"><b>${esc(x.titulo)}</b></span><span class="acts"><button class="sm" data-ver="${esc(x.id)}">Ver con respuestas</button><button class="sm pri" data-probar="${esc(x.id)}">Probar</button></span></div>`).join('')
-        + '<p class="mut">Al probar un examen no se guarda ningún resultado.</p>';
-      $('#lista').querySelectorAll('[data-ver]').forEach(b => b.onclick = () => vistaSolucion(b.dataset.ver));
-      $('#lista').querySelectorAll('[data-probar]').forEach(b => b.onclick = () => vistaExamen(b.dataset.probar));
-      return;
-    }
-    $('#lista').innerHTML = idx.map((x, i) => { const a = ult[`${nivel}/${x.id}`];
-      return `<button class="exam t${i % 4}" data-id="${esc(x.id)}"><span class="ico">${IC[i % 4]}</span><span class="ttl"><b>${esc(x.titulo)}</b><small>${a ? 'Última vez: ' + fecha(a.created_at) : 'Todavía sin hacer'}</small></span><span class="badge ${a ? cls(nota(a)) : 'go'}" ${a ? '' : 'aria-label="Empezar"'}>${a ? fmt(nota(a)) : '▶'}</span></button>`; }).join('');
-    $('#lista').querySelectorAll('button').forEach(b => b.onclick = () => vistaExamen(b.dataset.id));
+    $('#lista').innerHTML = temas.map((t, i) => { const n = t.examenes.length, h = t.examenes.filter(x => hechos.has(`${nivel}/${x.id}`)).length;
+      return `<button class="exam tema t${i % 4}" data-i="${i}"><span class="ico">${esc(t.icono || IC[i % 4])}</span><span class="ttl"><span class="k">${esc(t.tema)}</span><b>${esc(t.titulo)}</b>${esProfe() ? `<small>${n} exámenes</small>` : `<span class="mini"><span class="bar"><i style="width:${n ? h / n * 100 : 0}%"></i></span><small>${h} de ${n} hechos</small></span>`}</span><span class="badge go">›</span></button>`; }).join('');
+    $('#lista').querySelectorAll('button').forEach(b => b.onclick = () => vistaTema(Number(b.dataset.i)));
   } catch (e) { $('#lista').innerHTML = `<p class="err">No se ha podido mostrar la lista: ${esc(e && e.message || e)}</p>`; }
+}
+
+async function vistaTema(i) {
+  nav(true); temaActual = i; app.onclick = null;
+  app.innerHTML = '<p class="mut">Cargando…</p>';
+  let temas; try { temas = await cargarTemas(); } catch (e) { return vistaLista(); }
+  const t = temas[i]; if (!t) return vistaLista();
+  let data = []; if (!esProfe()) { try { data = await intentos(); } catch (e) {} }
+  const ult = {}; data.forEach(a => { ult[a.exam_id] ??= a; });
+  app.innerHTML = `<button class="back" id="atras">‹ Todos los temas</button><h2><span class="kicker">${esc(t.tema)}</span>${esc(t.titulo)}</h2><div id="lista"></div>`;
+  $('#atras').onclick = vistaLista;
+  if (esProfe()) {
+    $('#lista').innerHTML = t.examenes.map((x, k) => `<div class="exam t${tinte(x, k)}"><span class="ico">${iconoExamen(x, k)}</span><span class="ttl"><b>${esc(x.titulo)}</b></span><span class="acts"><button class="sm" data-ver="${esc(x.id)}">Ver con respuestas</button><button class="sm pri" data-probar="${esc(x.id)}">Probar</button></span></div>`).join('')
+      + '<p class="mut">Al probar un examen no se guarda ningún resultado.</p>';
+    $('#lista').querySelectorAll('[data-ver]').forEach(b => b.onclick = () => vistaSolucion(b.dataset.ver));
+    $('#lista').querySelectorAll('[data-probar]').forEach(b => b.onclick = () => vistaExamen(b.dataset.probar));
+    return;
+  }
+  $('#lista').innerHTML = t.examenes.map((x, k) => { const a = ult[`${nivel}/${x.id}`];
+    return `<button class="exam t${tinte(x, k)}" data-id="${esc(x.id)}"><span class="ico">${iconoExamen(x, k)}</span><span class="ttl"><b>${esc(x.titulo)}</b><small>${a ? 'Última vez: ' + fecha(a.created_at) : 'Todavía sin hacer'}</small></span><span class="badge ${a ? cls(nota(a)) : 'go'}" ${a ? '' : 'aria-label="Empezar"'}>${a ? fmt(nota(a)) : '▶'}</span></button>`; }).join('');
+  $('#lista').querySelectorAll('button').forEach(b => b.onclick = () => vistaExamen(b.dataset.id));
 }
 
 /* ---------- Examen ---------- */
 async function vistaExamen(id) {
   app.innerHTML = '<p class="mut">Cargando examen…</p>';
-  let ex; try { ex = await getJSON(`${RUTA}/${nivel}/${id}.json`); } catch (e) { app.innerHTML = `<p class="err">No se ha podido abrir el examen (${esc(RUTA + '/' + nivel + '/' + id + '.json')}). Vuelve a la lista e inténtalo de nuevo.</p><button class="btn" onclick="vistaLista()">Volver a los exámenes</button>`; return; }
+  let ex; try { ex = await getJSON(`${RUTA}/${nivel}/${id}.json`); } catch (e) { app.innerHTML = `<p class="err">No se ha podido abrir el examen (${esc(RUTA + '/' + nivel + '/' + id + '.json')}). Vuelve a la lista e inténtalo de nuevo.</p><button class="btn" onclick="volver()">Volver a los exámenes</button>`; return; }
   const test = (ex.test || []).map(q => ({ ...q, o: shuffle(q.opciones.map((t, i) => ({ t, ok: i === q.correcta }))) }));
   const dev = ex.desarrollo || [], ev = [];
   let tc = 0, dT = [], dO = [];
@@ -311,7 +345,7 @@ function vistaRevision(a, aviso) {
     <p style="margin-bottom:4px"><b>Tu respuesta</b></p><p style="white-space:pre-wrap;margin-top:0">${esc(q.respuesta) || '<span class="mut">(vacía)</span>'}</p>
     <div class="modelo"><b>Respuesta modelo</b><p>${esc(q.modelo)}</p></div>
     <p class="mut">Tu autocorrección: ${q.puntos === 1 ? '✅ Lo tenía' : q.puntos === 0.5 ? '🟡 En parte' : '❌ No'}</p></div>`).join('')}
-  <button class="btn" onclick="${a.alumno ? 'vistaProfe' : 'vistaLista'}()">${a.alumno ? 'Volver al panel' : 'Volver a los exámenes'}</button>`;
+  <button class="btn" onclick="${a.alumno ? 'vistaProfe()' : 'volver()'}">${a.alumno ? 'Volver al panel' : 'Volver a los exámenes'}</button>`;
   window.scrollTo(0, 0);
 }
 
@@ -325,7 +359,7 @@ async function vistaSolucion(id) {
   ${t.map((q, i) => `<div class="card q"><h3><span class="num">${i + 1}</span><span>${esc(q.pregunta)}</span></h3>${q.opciones.map((o, j) => `<p class="sol ${j === q.correcta ? 'right' : ''}">${j === q.correcta ? '✅ ' : ''}${esc(o)}</p>`).join('')}${q.explicacion ? `<p class="mut">${esc(q.explicacion)}</p>` : ''}</div>`).join('')}
   ${d.length ? `<h3>Desarrollo, ${d.length} preguntas</h3>` : ''}
   ${d.map((q, i) => `<div class="card q"><h3><span class="num">${t.length + i + 1}</span><span>${esc(q.pregunta)}</span></h3><div class="modelo"><b>Respuesta modelo</b><p>${esc(q.respuesta_modelo)}</p></div></div>`).join('')}
-  <button class="btn" onclick="vistaLista()">Volver a los exámenes</button>`;
+  <button class="btn" onclick="volver()">Volver a los exámenes</button>`;
   window.scrollTo(0, 0);
 }
 
