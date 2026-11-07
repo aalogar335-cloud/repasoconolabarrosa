@@ -1,50 +1,64 @@
 [
   {
-    "id": "tema1",
-    "titulo": "Tema 1: La función de nutrición (Modelo 1)"
+    "tema": "Tema 1",
+    "titulo": "La función de nutrición",
+    "icono": "🍎",
+    "examenes": [
+      {
+        "id": "tema1",
+        "titulo": "Modelo 1"
+      },
+      {
+        "id": "tema1b",
+        "titulo": "Modelo 2"
+      },
+      {
+        "id": "tema1c",
+        "titulo": "Modelo 3"
+      },
+      {
+        "id": "tema1d",
+        "titulo": "Modelo 4"
+      }
+    ]
   },
   {
-    "id": "tema1b",
-    "titulo": "Tema 1: La función de nutrición (Modelo 2)"
-  },
-  {
-    "id": "tema1c",
-    "titulo": "Tema 1: La función de nutrición (Modelo 3)"
-  },
-  {
-    "id": "tema1d",
-    "titulo": "Tema 1: La función de nutrición (Modelo 4)"
-  },
-  {
-    "id": "tema3-test1",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 1)"
-  },
-  {
-    "id": "tema3-des1",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 1)"
-  },
-  {
-    "id": "tema3-test2",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 2)"
-  },
-  {
-    "id": "tema3-des2",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 2)"
-  },
-  {
-    "id": "tema3-test3",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 3)"
-  },
-  {
-    "id": "tema3-des3",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 3)"
-  },
-  {
-    "id": "tema3-test4",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Test, modelo 4)"
-  },
-  {
-    "id": "tema3-des4",
-    "titulo": "Tema 3: La adolescencia, una etapa de la vida (Desarrollo, modelo 4)"
+    "tema": "Tema 3",
+    "titulo": "La adolescencia, una etapa de la vida",
+    "icono": "🌱",
+    "examenes": [
+      {
+        "id": "tema3-test1",
+        "titulo": "Test, modelo 1"
+      },
+      {
+        "id": "tema3-test2",
+        "titulo": "Test, modelo 2"
+      },
+      {
+        "id": "tema3-test3",
+        "titulo": "Test, modelo 3"
+      },
+      {
+        "id": "tema3-test4",
+        "titulo": "Test, modelo 4"
+      },
+      {
+        "id": "tema3-des1",
+        "titulo": "Desarrollo, modelo 1"
+      },
+      {
+        "id": "tema3-des2",
+        "titulo": "Desarrollo, modelo 2"
+      },
+      {
+        "id": "tema3-des3",
+        "titulo": "Desarrollo, modelo 3"
+      },
+      {
+        "id": "tema3-des4",
+        "titulo": "Desarrollo, modelo 4"
+      }
+    ]
   }
 ]
